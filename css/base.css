@@ -1,0 +1,63 @@
+html {
+  font-size:14.1732pt;  /* = 5mm */
+  line-height:14.1732pt;
+}
+
+body {
+	font-family : 'Assistant', sans-serif;
+	font-size : 65.2%;                      /* 5*0.60 = 3mm */
+	line-height : 1.5em;
+	margin : 0;
+	padding : 0;
+}
+
+body *{
+	box-sizing: border-box;
+}
+
+div, header, main, nav, .header, .main, .nav  {
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin : 0;
+	margin-bottom : 1em;
+}
+
+p  { font-size: 1.2em; }
+h1 { font-size: 2.1em; margin-top: 1em;}
+h2 { font-size: 1.9em; }
+h3 { font-size: 1.7em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1.1em; }
+
+.stoper {
+	display : table ;
+}
+
+nav,.nav {
+	display: inline;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display : flex;
+	-webkit-flex-wrap: nowrap;
+	-moz-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap : nowrap;
+	-webkit-justify-content : flex-end;
+	-moz-justify-content : flex-end;
+	-ms-justify-content : flex-end;
+	justify-content : flex-end;
+	list-style-type: none;
+	padding: 0;
+}
+nav div, .nav div {
+	margin : 0;
+	padding: 0;
+}
+
+
