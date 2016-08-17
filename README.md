@@ -1,2 +1,2 @@
 
-Some FreeCodeCamp chalnges and projects.
+Some FreeCodeCamp chalenges and projects.

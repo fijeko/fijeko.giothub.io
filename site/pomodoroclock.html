@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="usefull clr-bkg clr">
+	<div class="usefull  clr-bkg clr">
 		
 		<header class="header">
 			<nav class="nav clr-bkg-blue">
@@ -25,39 +25,35 @@
 		<main class="main">
 
 			<div class="timer-time clr-bkg-blue">
-				<div>
-					<p>
+					<h5>
 						Your <strong id="clock_mode_y">M</strong> time
 						is <strong id="clock_mode_n">M</strong> ticking
-						-  -  - <strong id="clock_mode_t">M</strong>
-					</p>
-				</div>
-				<div class="timer-clk">
+						<br/><strong id="clock_mode_t">M</strong>
+					</h5>
 					<p class="timer-main clr-main">
 						<span id="clock_mm">MM</span> : <span id="clock_ss">SS</span>
 					</p>
-				</div>
+			</div>
+
+			<div class="timer-togglet clr-light">
+					<h5>timer:</h5>
+					<p>Pause (if you realy must), resume (as soon as possible) your working time
+					<br />
+					Feel free during break</p>
+			</div>
+			<div class="timer-togglet clr-light">
+					<h5>virtual time passing:</h5>
+					<p>Make your time goes faster or slower (if you like)</p>
 			</div>
 
 			<div class="timer-togglet">
-				<div class="clr-light">
-					<h5>timer:</h5>
-					<p>Pause (if you realy must), resume (as soon as possible) your working time
-					</br>
-					Feel free during break</p>
-				</div>
-				<div class="two-button">
-					<button id="clock_tgl">START/STOP</button>
-					<button id="clock_rst">RESET</button>
+				<div class="two-button button-clr">
+					<button id="clock_tgl">START/STOP</button><!-- 
+					--><button id="clock_rst">RESET</button>
 				</div>
 			</div>
-			
 			<div class="timer-togglet">
-				<div class="clr-light">
-					<h5>virtual time passsing:</h5>
-					<p>Make your time goes faster or slower (if you like)</p>
-				</div>
-				<div class="one-button">
+				<div class="select-button button-clr">
 					<select id="t_speed">
 						<option selected="selected" label="normal speed" value="1">normal speed</option>
 						<optgroup label="faster">
@@ -74,31 +70,31 @@
 				</div>
 			</div>
 	
-			<div class="timer-togglet">
-				<div class="clr-light">
+			<div class="timer-togglet clr-light">
 					<h5>working session:</h5>
-					<p>Set minutes for your working session</br>
+					<p>Set minutes for your working session<br />
 						<span class="clr-warn"> This will reset timer!</span>
 					</p>
-				</div>
-				<div class="adj-button">
-					<button id="session_up">+</button>
-					<span id="session" class="clr-light">MM</span>
-					<button id="session_dn">-</button>
+			</div>
+			<div class="timer-togglet clr-light">
+					<h5>break:</h5>
+					<p>Set minutes for your break<br />
+						<span class="clr-warn"> This will reset timer!</span>
+					</p>
+			</div>
+
+			<div class="timer-togglet">
+				<div class="adj-button button-clr">
+					<button id="session_up">+</button><!-- 
+					--><input  id="session" type="text" disabled cursor="none" value="MM"><!-- 
+					--><button id="session_dn">-</button>
 				</div>
 			</div>
-	
 			<div class="timer-togglet">
-				<div class="clr-light">
-					<h5>break:</h5>
-					<p>Set minutes for your break</br>
-						<span class="clr-warn"> This will reset timer!</span>
-					</p>
-				</div>
-				<div class="adj-button">
-					<button id="break_up">+</button>
-					<span id="break"  class="clr-light">MM</span>
-					<button id="break_dn">-</button>
+				<div class="adj-button button-clr">
+					<button id="break_up">+</button><!-- 
+					--><input  id="break" type="text" disabled cursor="none" value="MM"><!-- 
+					--><button id="break_dn">-</button>
 				</div>
 			</div>
 		

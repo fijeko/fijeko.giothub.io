@@ -1,21 +1,26 @@
 html {
-  font-size:14.1732pt;  /* = 5mm */
+  font-size:14.1732pt;                         /* = 5mm */
   line-height:14.1732pt;
 }
 
 body {
+	background: #efefff;
 	font-family : 'Assistant', sans-serif;
-	font-size : 65.2%;                      /* 5*0.60 = 3mm */
+	font-size : 65.2%;                           /* 5 * 0.60 = 3mm */
+	height: 100%;                     
 	line-height : 1.5em;
 	margin : 0;
 	padding : 0;
+	width: 100%;
 }
 
 body *{
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
-div, header, main, nav, .header, .main, .nav  {
+header, main, nav, .header, .main, .nav  {
 	margin: 0;
 	margin-bottom: 5px;
 	padding: 5px;
@@ -33,6 +38,38 @@ h3 { font-size: 1.7em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.3em; }
 h6 { font-size: 1.1em; }
+
+/* first the smalest display*/
+.usefull-h {
+	min-height: 400px;
+}
+.usefull {
+	min-height: 400px;
+	margin :  auto;
+	padding : 5 15px;
+	position : relative;
+	width : 240px;
+}
+	
+/* width */
+@media only screen and (min-width: 320px) { /* from 320px and up */
+	.usefull { width : 320px; } }
+@media only screen and (min-width: 767px) {  /* 767px an up */
+	.usefull { width : 700px; } }
+@media only screen and (min-width: 959px) {  /* 959px an up */
+	.usefull { width : 900px; } }
+@media only screen and (min-width: 1024px) { 
+	.usefull { width : 1000px; } }
+	
+/* height */
+@media only screen and (min-height: 480px) { /* from 480px and up */
+	.usefull{ min-height : 480px; } }
+@media only screen and (min-height: 640px) { /* from 640px and up */
+	.usefull{ min-height : 640px; } }
+@media only screen and (min-height: 960px) {  /* from 960px and up */
+	.usefull{ min-height : 950px; } }
+@media only screen and (min-height: 1024px) {   /* from 1024px and up */
+	.usefull{ min-height : 1000px; } }
 
 .stoper {
 	display : table ;

@@ -35,7 +35,7 @@ var pomodoro_clock = {
 		});
 
 		pomodoro_clock.time_speed();
-		pomodoro_clock.draw_clock( {min:4,sec:0,rest:5,work:4,mode:true} );
+		pomodoro_clock.draw_clock( {min:25,sec:0,rest:5,work:25,mode:true} );
 		
 	},
 
@@ -72,9 +72,6 @@ var pomodoro_clock = {
 
 		
 		pomodoro_clock.rewrite_clock();
-
-
-console.log('press', pomodoro_clock.timer_id);
 	},
 
 	toggle_clock : function(){
@@ -87,8 +84,6 @@ console.log('press', pomodoro_clock.timer_id);
 		}
 
 		pomodoro_clock.draw_clock( {mode: true} );
-		
-console.log('togle', pomodoro_clock.timer_id)
 	},
 
 	reset_clock : function(){
@@ -105,14 +100,14 @@ console.log('togle', pomodoro_clock.timer_id)
 
 	intervals : function(){
 		var e = pomodoro_clock.mouse_target;
-		var x = Number(document.getElementById(e.target.id.slice(0,-3)).innerHTML);
+		var x = Number(document.getElementById(e.target.id.slice(0,-3)).value);
 		
 		if(e.target.id.slice(-2) == 'up'){
 			if( (x += 1) == 60 ) x = 0;
 		}else if(e.target.id.slice(-2) == 'dn'){
 			if( (x -= 1) == -1 ) x = 59;
 		}
-		document.getElementById(e.target.id.slice(0,-3)).innerHTML = x;
+		document.getElementById(e.target.id.slice(0,-3)).value = x;
 	},
 
 
@@ -144,7 +139,7 @@ console.log('togle', pomodoro_clock.timer_id)
 			seq = 'session';
 		else
 			seq = 'break';
-		var mm = document.getElementById(seq).innerHTML;
+		var mm = document.getElementById(seq).value;
 		var ss = 0;
 		pomodoro_clock.draw_clock( { min:mm, sec:ss, mode:true } );
 	},
@@ -154,10 +149,10 @@ console.log('togle', pomodoro_clock.timer_id)
 	draw_clock : function( options ){
 
 		if( options.rest != undefined )
-			document.getElementById('break').innerHTML = options.rest;
+			document.getElementById('break').value = options.rest;
 
 		if( options.work != undefined )
-		document.getElementById('session').innerHTML = options.work;
+		document.getElementById('session').value = options.work;
 
 		if( options.min != undefined )
 			document.getElementById('clock_mm').innerHTML = options.min;
@@ -180,6 +175,11 @@ console.log('togle', pomodoro_clock.timer_id)
 			document.getElementById('clock_mode_t').innerHTML =
 				document.getElementById('t_speed')
 				[document.getElementById('t_speed').selectedIndex].label;	
+		}
+		if( pomodoro_clock.timer_id === undefined ){
+			document.getElementById('clock_tgl').innerHTML =' START';
+		}else{
+			document.getElementById('clock_tgl').innerHTML =' STOP';
 		}
 			
 	},
