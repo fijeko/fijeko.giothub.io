@@ -1,0 +1,103 @@
+/* position */
+
+.display {
+	margin : 24px auto;
+	padding : 4px;
+	width: 100%;
+}
+.display div {
+	border: 1px double white;
+	margin-bottom: 4px;
+	text-align : center;
+	padding-top : 0.5em;
+	width : 100%;
+}
+
+
+.d_funny {
+	width : 100%;
+}
+.b_funny {
+	display : inline-block;
+	padding: 25%;
+	vertical-align : top;
+	width: 25%;
+}
+
+@media only screen and (min-width: 767px) {  /* 767px an up */
+	.b_funny {
+		display : inline-block;
+		padding: 12.5%;
+		vertical-align : top;
+		width: 12.5%;
+	}
+	.display {
+		border-spacing:4px;
+		border-collapse: separate;
+		display : table;
+		table-layout : fixed;
+		margin : 24px auto 34px 48px;
+		width : 50%;
+	}
+	.display div {
+		width : 50%;
+	}
+	.display div {
+		border: 1px double white;
+		display : table-cell;
+		font-size : 18px;
+		text-align : center;
+		vertical-align : middle;
+		width : 100%;
+	}
+}
+
+/* nice */
+
+body { 
+  background: url(../media/dbwr.jpg) no-repeat fixed center center ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.b_red {
+	background-color: #a00;
+}
+.b_green {
+	background-color: #0a0;
+}
+.b_yellow {
+	background-color: #aa0;
+}
+.b_blue {
+	background-color: #00a;
+}
+
+.stop_g {
+	background-color : transparent;
+	color : white;
+}
+.play_g {
+	background-color : orange;
+	color : maroon;
+}
+.repr_g {
+	background-color : lightgreen;
+	color : maroon;
+}
+.winn_g {
+	background-color : gold;
+	color : maroon;
+}
+.fail_g {
+	background-color : black;
+	color : white;
+}
+.def_g {
+	background-color : red;
+	color : yellow;
+}
+
+

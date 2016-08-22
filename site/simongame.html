@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+	<link href="../css/base.css" rel="stylesheet"> 
+	<link href="../css/simongame.css" rel="stylesheet"> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no" />
+	<title>SIMON GAME</title>
+	<meta name="generator" content="Geany 1.24.1" />
+	<script src="../scripts/simongame.js"></script>
+</head>
+
+<body>
+	<div class="usefull usefull-h">
+
+
+		<header class="header clr-bkg ">
+			<nav class="nav clr-bkg-blue clr">
+				<div><a href="../index.html"><button>HOME</button></a></div>
+			</nav>
+			<h3 class="clr-light">FreeCodeCamp Project:</h3>
+			<h1 class="clr-light">SIMON GAME</h1>
+		</header>
+			
+		<main class="main">
+
+			<div>
+				<audio id="snd_1" type="audio/mpeg"
+					src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+				<audio id="snd_2" type="audio/mpeg"
+					src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+				<audio id="snd_3" type="audio/mpeg"
+					src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+				<audio id="snd_4" type="audio/mpeg"
+					src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3">adio</audio>
+			</div>
+
+			<div class="display clr-cmd">
+				<div id="d_mode"><p id="p_mode"> ----- </p></div>
+				<div id="d_step"><p>steps: <span id="p_step">0</span></p></div>
+			</div>
+			
+			<div class="d_funny">
+				<div id="b_snd1" class="b_funny b_red"></div><!-- 
+				--><div id="b_snd2" class="b_funny b_green"></div><!-- 
+				--><div id="b_snd3" class="b_funny b_yellow"></div><!-- 
+				--><div id="b_snd4" class="b_funny b_blue"></div>
+			</div>
+
+			<div class="b_on-off clr-cmd" >
+				<div>O</div><!--
+				--><div id="b_stop"></div><!--
+				--><div id="b_start"></div><!--
+				--><div>I</div>
+			</div>
+			
+		</main>
+	</div>
+</body>
+
+</html>

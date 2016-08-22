@@ -95,11 +95,7 @@ main, .main{
 
 /* colors */
 
-.clr-bkg { background : #012345; }
-.clr-bkg-blue { background : #abcdef; }
 
-.clr { color: #123456; }
-.clr-light { color: #def; }
 .clr-warn { color: #f84; }
 .clr-main { color: #f00; }
 

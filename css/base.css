@@ -1,3 +1,4 @@
+/* globals */
 html {
   font-size:14.1732pt;                         /* = 5mm */
   line-height:14.1732pt;
@@ -11,6 +12,7 @@ body {
 	line-height : 1.5em;
 	margin : 0;
 	padding : 0;
+	position : absolute;
 	width: 100%;
 }
 
@@ -28,7 +30,7 @@ header, main, nav, .header, .main, .nav  {
 
 p, h1, h2, h3, h4, h5, h6 {
 	margin : 0;
-	margin-bottom : 1em;
+	margin-bottom : 0.5em;
 }
 
 p  { font-size: 1.2em; }
@@ -41,13 +43,13 @@ h6 { font-size: 1.1em; }
 
 /* first the smalest display*/
 .usefull-h {
-	min-height: 400px;
+	min-height: 320px;
 }
 .usefull {
-	min-height: 400px;
-	margin :  auto;
+	min-width: 320px;
+	margin-left : auto;
+	margin-right : auto;
 	padding : 5 15px;
-	position : relative;
 	width : 240px;
 }
 	
@@ -62,14 +64,14 @@ h6 { font-size: 1.1em; }
 	.usefull { width : 1000px; } }
 	
 /* height */
-@media only screen and (min-height: 480px) { /* from 480px and up */
-	.usefull{ min-height : 480px; } }
+@media only screen and (min-height: 460px) { /* from 480px and up */
+	.usefull-h{ max-height : 460px; } }
 @media only screen and (min-height: 640px) { /* from 640px and up */
-	.usefull{ min-height : 640px; } }
+	.usefull-h{ max-height : 640px; } }
 @media only screen and (min-height: 960px) {  /* from 960px and up */
-	.usefull{ min-height : 950px; } }
+	.usefull-h{ margin-top: 80px; max-height : 950px; } }
 @media only screen and (min-height: 1024px) {   /* from 1024px and up */
-	.usefull{ min-height : 1000px; } }
+	.usefull-h{ margin-top: 160px; max-height : 1000px; } }
 
 .stoper {
 	display : table ;
@@ -92,9 +94,64 @@ nav,.nav {
 	list-style-type: none;
 	padding: 0;
 }
+
+footer, .footer {
+
+	background-color : black;
+	bottom : 0;
+	color : white;
+	padding: 20px 15px;
+	position : absolute;
+	text-align: justify;
+}
+
+footer p, .footer p {
+	width : 100%;
+}
+
+
+
 nav div, .nav div {
 	margin : 0;
 	padding: 0;
 }
+
+
+.b_on-off{
+	display : table;
+	height : 26px;
+	margin:10px auto;
+	padding : 4px;
+	width : 144px;
+}
+.b_on-off * {
+	display: table-cell;
+	height:100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.b_on-off *:first-child{  width :15%; }
+.b_on-off *:nth-child(2){ width : 35%; }
+.b_on-off *:nth-child(3){ width : 35%; }
+.b_on-off *:nth-child(4){ width : 15%; }
+
+
+
+
+
+.clr-cmd{
+	background-color: #444;
+	color : white;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+
+.clr-bkg { background : #012345; }
+.clr-bkg-blue { background : #abcdef none repeat; }
+.clr-bkg-gray { background : #555 none repeat; }
+
+.clr { color: #123456; }
+.clr-light { color: #def; }
 
 
