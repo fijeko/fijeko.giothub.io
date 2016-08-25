@@ -1,6 +1,6 @@
 var simongame = {
 	time_delay : 1000,
-	win_steps : 4,
+	win_steps : 20,
 	strict_g : 0,
 	
 	mode : 'stop',
