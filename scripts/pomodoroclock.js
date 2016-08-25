@@ -42,7 +42,7 @@ var pomodoro_clock = {
 	time_speed : function(e){
 
 		pomodoro_clock.interval_span =
-			document.getElementById('t_speed').value * pomodoro_clock.interval_second;
+			document.getElementById('t_speed').innerHTML * pomodoro_clock.interval_second;
 
 		if( pomodoro_clock.timer_id ){
 			clearTimeout(pomodoro_clock.timer_id);
@@ -100,14 +100,14 @@ var pomodoro_clock = {
 
 	intervals : function(){
 		var e = pomodoro_clock.mouse_target;
-		var x = Number(document.getElementById(e.target.id.slice(0,-3)).value);
+		var x = Number(document.getElementById(e.target.id.slice(0,-3)).innerHTML);
 		
 		if(e.target.id.slice(-2) == 'up'){
 			if( (x += 1) == 60 ) x = 0;
 		}else if(e.target.id.slice(-2) == 'dn'){
 			if( (x -= 1) == -1 ) x = 59;
 		}
-		document.getElementById(e.target.id.slice(0,-3)).value = x;
+		document.getElementById(e.target.id.slice(0,-3)).innerHTML = x;
 	},
 
 
@@ -139,7 +139,7 @@ var pomodoro_clock = {
 			seq = 'session';
 		else
 			seq = 'break';
-		var mm = document.getElementById(seq).value;
+		var mm = document.getElementById(seq).innerHTML;
 		var ss = 0;
 		pomodoro_clock.draw_clock( { min:mm, sec:ss, mode:true } );
 	},
@@ -148,20 +148,21 @@ var pomodoro_clock = {
 	/* options = { min: , sec: , rest: , work: , mode: } */
 	draw_clock : function( options ){
 
-		if( options.rest != undefined )
-			document.getElementById('break').value = options.rest;
+		if( options.rest !== undefined )
+			document.getElementById('break').innerHTML = options.rest;
 
-		if( options.work != undefined )
-		document.getElementById('session').value = options.work;
+		if( options.work !== undefined )
+		document.getElementById('session').innerHTML = options.work;
 
-		if( options.min != undefined )
+		if( options.min !== undefined )
 			document.getElementById('clock_mm').innerHTML = options.min;
 
-		if( options.sec != undefined )
+		if( options.sec !== undefined )
 			document.getElementById('clock_ss').innerHTML =
 				(options.sec < 10 ? "0":"") + options.sec;
 
-		if( options.mode != undefined ){
+		if( options.mode !== undefined ){
+			var sp, swb;
 			if( pomodoro_clock.timer_id === undefined ){
 				sp = 'NOT';
 				swb = '';
@@ -171,10 +172,6 @@ var pomodoro_clock = {
 			}
 			document.getElementById('clock_mode_y').innerHTML = swb;
 			document.getElementById('clock_mode_n').innerHTML = sp;
-
-			document.getElementById('clock_mode_t').innerHTML =
-				document.getElementById('t_speed')
-				[document.getElementById('t_speed').selectedIndex].label;	
 		}
 		if( pomodoro_clock.timer_id === undefined ){
 			document.getElementById('clock_tgl').innerHTML =' START';
@@ -189,14 +186,3 @@ var pomodoro_clock = {
 
 window.onload = pomodoro_clock.on_window_load;
  
-
- 
-	
-
-
-	
-
-		
-
-
-

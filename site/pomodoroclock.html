@@ -4,57 +4,85 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
 	<link href="../css/base.css" rel="stylesheet"> 
+	<link href="../css/buttons.css" rel="stylesheet"> 
 	<link href="../css/pomodoroclock.css" rel="stylesheet"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no">
+
 	<title>POMODORO CLOCK</title>
 	<meta name="generator" content="Geany 1.24.1" />
+
 	<script src="../scripts/pomodoroclock.js"></script>
 </head>
 
 <body>
-	<div class="usefull  clr-bkg clr">
+	
+	<div class="usefull usefull-h clr-light-on-dark">
 		
-		<header class="header">
-			<nav class="nav clr-bkg-blue">
-				<div><a href="../index.html"><button>HOME</button></a></div>
-			</nav>
-			<h3 class="clr-light">FreeCodeCamp Project</h3>
+		<header class="header clr-light-on-dark">
 			<h1 class="clr-light">POMODORO CLOCK</h1>
+			<h6 class="clr-light">FreeCodeCamp Project</h6>
 		</header>
+		<nav class="nav clr-black-on-sky">
+			<div class="clr-light-on-dark"><a href="../index.html"><p>HOME</p></a></div>
+		</nav>
 			
-		<main class="main">
+		<main class="pomodoro">
 
-			<div class="timer-time clr-bkg-blue">
-					<h5>
-						Your <strong id="clock_mode_y">M</strong> time
-						is <strong id="clock_mode_n">M</strong> ticking
-						<br/><strong id="clock_mode_t">M</strong>
-					</h5>
-					<p class="timer-main clr-main">
+			<div class="timer clr-black-on-sky full-width">
+					<p>
+						Your <strong><span id="clock_mode_y">M</span></strong> time
+						is <strong><span id="clock_mode_n">M</span></strong> ticking
+					</p>
+					<p class="timer-time">
 						<span id="clock_mm">MM</span> : <span id="clock_ss">SS</span>
 					</p>
 			</div>
 
-			<div class="timer-togglet clr-light">
+			<div class="timer-text clr-light-on-dark full-width">
 					<h5>timer:</h5>
 					<p>Pause (if you realy must), resume (as soon as possible) your working time
 					<br />
 					Feel free during break</p>
 			</div>
-			<div class="timer-togglet clr-light">
-					<h5>virtual time passing:</h5>
-					<p>Make your time goes faster or slower (if you like)</p>
-			</div>
 
-			<div class="timer-togglet">
-				<div class="two-button button-clr">
-					<button id="clock_tgl">START/STOP</button><!-- 
-					--><button id="clock_rst">RESET</button>
+			<div class="timer-set clr-dark-on-light full-width">
+				<div class="bt-two">
+					<div id="clock_tgl">START</div><!-- 
+					--><div id="clock_rst">RESET</div>
 				</div>
 			</div>
-			<div class="timer-togglet">
-				<div class="select-button button-clr">
-					<select id="t_speed">
+			
+	
+			<div class="timer-text clr-light half-width">
+					<h5>working session:</h5>
+					<p>Set minutes for your working session<br />
+						<span class="clr-warn"> This will reset timer!</span>
+					</p>
+			</div><div class="timer-text clr-light half-width">
+					<h5>break:</h5>
+					<p>Set minutes for your break<br />
+						<span class="clr-warn"> This will reset timer!</span>
+					</p>
+			</div>
+
+			<div class="timer-set clr-dark-on-light half-width">
+				<div class="bt-num-range">
+					<div id="session_up">+</div><!-- 
+					--><div id="session" value="MM"></div><!-- 
+					--><div id="session_dn">-</div>
+				</div>
+			</div>
+			<div class="timer-set clr-dark-on-light half-width">
+				<div class="bt-num-range">
+					<div id="break_up">+</div><!-- 
+					--><div id="break" value="MM"></div><!-- 
+					--><div id="break_dn">-</div>
+				</div>
+			</div>
+
+			<div class="timer-set clr-dark-on-light full-width">
+				<div class="sel-select">
+					<select id="t_speed" class="nobutton">
 						<option selected="selected" label="normal speed" value="1">normal speed</option>
 						<optgroup label="faster">
 							<option label="2x faster" value="0.5">2x faster</option>
@@ -69,37 +97,11 @@
 					</select>
 				</div>
 			</div>
-	
-			<div class="timer-togglet clr-light">
-					<h5>working session:</h5>
-					<p>Set minutes for your working session<br />
-						<span class="clr-warn"> This will reset timer!</span>
-					</p>
-			</div>
-			<div class="timer-togglet clr-light">
-					<h5>break:</h5>
-					<p>Set minutes for your break<br />
-						<span class="clr-warn"> This will reset timer!</span>
-					</p>
-			</div>
-
-			<div class="timer-togglet">
-				<div class="adj-button button-clr">
-					<button id="session_up">+</button><!-- 
-					--><input  id="session" type="text" disabled cursor="none" value="MM"><!-- 
-					--><button id="session_dn">-</button>
-				</div>
-			</div>
-			<div class="timer-togglet">
-				<div class="adj-button button-clr">
-					<button id="break_up">+</button><!-- 
-					--><input  id="break" type="text" disabled cursor="none" value="MM"><!-- 
-					--><button id="break_dn">-</button>
-				</div>
-			</div>
 		
 		</main>
 	</div>
+
+
 
 </body>
 

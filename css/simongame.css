@@ -1,103 +1,87 @@
 /* position */
 
-.display {
-	margin : 24px auto;
-	padding : 4px;
-	width: 100%;
-}
-.display div {
-	border: 1px double white;
-	margin-bottom: 4px;
-	text-align : center;
-	padding-top : 0.5em;
+.simongame {
+	bottom: 0;
+	position: absolute;
+	top: 150px;
 	width : 100%;
+}
+
+.d_display{
+	left : 15%;
+	height: 15%;
+	position : absolute;
+	right : 15%;
+	top: 0;
+}
+.d_display > div {
+	height: 50%;
+	padding: 0 16px;
+	position : relative;
+	width : 100%;
+}
+.d_display > div > * {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translate( -50%, -50%); /* IE 9 */
+  -webkit-transform: translate( -50%, -50%); /* Safari */
+  transform: translate( -50%, -50%);
 }
 
 
 .d_funny {
-	width : 100%;
+	left : 15%;
+	position : absolute;
+	right : 15%;
+	top: 25%;
 }
 .b_funny {
 	display : inline-block;
-	padding: 25%;
+	margin:1%;
+	padding: 24%;
 	vertical-align : top;
-	width: 25%;
+	width: 24%;
 }
 
-@media only screen and (min-width: 767px) {  /* 767px an up */
-	.b_funny {
-		display : inline-block;
-		padding: 12.5%;
-		vertical-align : top;
-		width: 12.5%;
-	}
-	.display {
-		border-spacing:4px;
-		border-collapse: separate;
-		display : table;
-		table-layout : fixed;
-		margin : 24px auto 34px 48px;
-		width : 50%;
-	}
-	.display div {
-		width : 50%;
-	}
-	.display div {
-		border: 1px double white;
-		display : table-cell;
-		font-size : 18px;
-		text-align : center;
-		vertical-align : middle;
-		width : 100%;
-	}
-}
-
+	
 /* nice */
+/* display */
 
-body { 
-  background: url(../media/dbwr.jpg) no-repeat fixed center center ; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+#p_step{
+	font-size: 2em;
+	line-height: 1em;
+	text-align: center;
+	position: relative;
 }
-
-.b_red {
-	background-color: #a00;
-}
-.b_green {
-	background-color: #0a0;
-}
-.b_yellow {
-	background-color: #aa0;
-}
-.b_blue {
-	background-color: #00a;
+.clr-display {
+	background: #333;
+	color: #fff;
 }
 
-.stop_g {
-	background-color : transparent;
-	color : white;
+/* funny */
+.d_funny {
+	background : #333;
+	border-radius: 20%;
 }
-.play_g {
-	background-color : orange;
-	color : maroon;
+.b_funny {
+	border-radius: 40%;
 }
-.repr_g {
-	background-color : lightgreen;
-	color : maroon;
-}
-.winn_g {
-	background-color : gold;
-	color : maroon;
-}
-.fail_g {
-	background-color : black;
-	color : white;
-}
-.def_g {
-	background-color : red;
-	color : yellow;
-}
+.clr-f1 { background-color: #faa; }
+.clr-f2 { background-color: #bfb; }
+.clr-f3 { background-color: #ffa; }
+.clr-f4 { background-color: #89f; }
+
+.clr-active-f1 { background-image: radial-gradient( #fee 0%, #fff 8%, #fff 16%, #fbb 85% ); }
+.clr-active-f2 { background-image: radial-gradient( #dfd 0%, #fff 8%, #fff 16%, #afa 85% ); }
+.clr-active-f3 { background-image: radial-gradient( #ff8 0%, #fff 8%, #fff 16%, #ffb 85% ); }
+.clr-active-f4 { background-image: radial-gradient( #eef 0%, #fff 8%, #fff 16%, #78f 85% ); }
+
+.stop_g { background-color : #555; color : $fff; }
+.play_g { background-color : #89f; color : #def; }
+.repr_g { background-color : #bfb; color : #def; }
+.winn_g { background-color : #ffa; color : #def; }
+.fail_g { background-color : #faa; color : #def; }
+.def_g { background-color : 000; color : #aa0 }
 
 

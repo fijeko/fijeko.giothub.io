@@ -50,10 +50,10 @@ var simongame = {
 		}
 		return function(){
 			if( simongame.mode != 'play' )  return;
-			document.getElementById( 'b_snd' + s ).style.background = 'blue';
+			document.getElementById( 'b_snd' + s ).className = 'b_funny clr-active-f' + s;
 			document.getElementById( 'snd_'  + s ).play();
 			setTimeout( function(){
-					document.getElementById( 'b_snd' + s ).style.background = '';
+					document.getElementById( 'b_snd' + s ).className = 'b_funny clr-f' + s;
 			}, 200);
 		}
 	},
@@ -62,10 +62,10 @@ var simongame = {
 	listen_sound : function(e){
 		
 		var s = e.target.id.slice(-1);
-		document.getElementById( 'b_snd' + s ).style.background = 'green';
+		document.getElementById( 'b_snd' + s ).className = 'b_funny clr-active-f' + s;
 		document.getElementById( 'snd_' + s ).play();
 		setTimeout( function(){
-					document.getElementById( 'b_snd' + s ).style.background = '';
+					document.getElementById( 'b_snd' + s ).className = 'b_funny clr-f' + s;
 			}, 200);
 
 		if( simongame.pattern[simongame.check_sound] != s ) {
@@ -142,45 +142,39 @@ console.log('stop_listen' );
 	output : function(){
 		switch( simongame.mode ){
 			case 'stop' : {
-				document.getElementById('p_mode').innerHTML = '---------';
-				document.getElementById('d_mode').className = 'stop_g';
-				document.getElementById('b_start').className = 'clr-bkg-gray';
-				document.getElementById('b_stop').className = 'clr-bkg-blue';
+				document.getElementById('p_step').className = 'stop_g';
+				document.getElementById('b_start').className = 'clr-bt-of';
+				document.getElementById('b_stop').className = 'clr-bt-on';
 				break;
 			}
 			case 'play' : {
-				document.getElementById('p_mode').innerHTML = 'Listen';
-				document.getElementById('d_mode').className = 'play_g';
-				document.getElementById('b_stop').className = 'clr-bkg-gray';
-				document.getElementById('b_start').className = 'clr-bkg-blue';
+				document.getElementById('p_step').className = 'play_g';
+				document.getElementById('b_stop').className = 'clr-bt-of';
+				document.getElementById('b_start').className = 'clr-bt-on';
 				break;
 			}
 			case 'repr' : {
-				document.getElementById('p_mode').innerHTML = 'Repeat';
-				document.getElementById('d_mode').className = 'repr_g';
-				document.getElementById('b_stop').className = 'clr-bkg-gray';
-				document.getElementById('b_start').className = 'clr-bkg-blue';
+				document.getElementById('p_step').className = 'repr_g';
+				document.getElementById('b_stop').className = 'clr-bt-of';
+				document.getElementById('b_start').className = 'clr-bt-on';
 				break;
 			}
 			case 'winn' : {
-				document.getElementById('p_mode').innerHTML = 'YOU DID IT!';
-				document.getElementById('d_mode').className = 'winn_g';
-				document.getElementById('b_start').className = 'clr-bkg-gray';
-				document.getElementById('b_stop').className = 'clr-bkg-blue';
+				document.getElementById('p_step').className = 'winn_g';
+				document.getElementById('b_start').className = 'clr-bt-of';
+				document.getElementById('b_stop').className = 'clr-bt-on';
 				break;
 			}
 			case 'fail' : {
-				document.getElementById('p_mode').innerHTML = 'WRONG TONE!';
-				document.getElementById('d_mode').className = 'fail_g';
-				document.getElementById('b_start').className = 'clr-bkg-gray';
-				document.getElementById('b_stop').className = 'clr-bkg-blue';
+				document.getElementById('p_step').className = 'fail_g';
+				document.getElementById('b_start').className = 'clr-bt-of';
+				document.getElementById('b_stop').className = 'clr-bt-on';
 				break;
 			}
 			default : {
-				document.getElementById('p_mode').innerHTML = '--ERR--';
-				document.getElementById('d_mode').className = 'def_g';
-				document.getElementById('b_start').className = 'clr-bkg-gray';
-				document.getElementById('b_stop').className = 'clr-bkg-blue';
+				document.getElementById('p_step').className = 'def_g';
+				document.getElementById('b_start').className = 'clr-bt-of';
+				document.getElementById('b_stop').className = 'clr-bt-on';
 				break;
 			}
 		}
@@ -189,4 +183,6 @@ console.log('stop_listen' );
 }
 
 window.onload = simongame.on_window_load;
+
+
 
