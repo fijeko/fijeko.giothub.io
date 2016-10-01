@@ -42,7 +42,7 @@ var pomodoro_clock = {
 	time_speed : function(e){
 
 		pomodoro_clock.interval_span =
-			document.getElementById('t_speed').innerHTML * pomodoro_clock.interval_second;
+			document.getElementById('t_speed').value * pomodoro_clock.interval_second;
 
 		if( pomodoro_clock.timer_id ){
 			clearTimeout(pomodoro_clock.timer_id);
