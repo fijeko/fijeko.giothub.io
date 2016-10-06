@@ -1,12 +1,5 @@
 /* position */
 
-.simongame {
-	bottom: 0;
-	position: absolute;
-	top: 150px;
-	width : 100%;
-}
-
 .d_display{
 	left : 15%;
 	height: 15%;

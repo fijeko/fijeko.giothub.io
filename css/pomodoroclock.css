@@ -1,11 +1,21 @@
+.around{
+	max-width: 480px;
+	margin:auto;
+}
+
+.footer p{
+	margin:auto;
+	max-width: 768px;
+}
+
 .pomodoro{
 	border : 1px solid #def;
 	border-radius:  4px;
 	bottom : 0;
 	height: 320px;
-	max-width: 560px;
 	position: relative;
 }
+
 .timer {
 	height:50%;
 }
@@ -30,7 +40,6 @@
 		-webkit-flex-flow: wrap;
 		-ms-flex-flow: wrap;
 		flex-flow : wrap;
-		max-width: 480px;
 		min-height: 480px;
 	}
 	.half-width {

@@ -1,0 +1,152 @@
+.footer p{
+	margin:auto;
+	max-width: 768px;
+}
+.usefull{
+	max-width: 768px;
+}
+.around {
+	margin:auto;
+	max-width: 768px;
+}
+
+
+.tictactoe {
+	float: left;
+	width: 768px;
+}
+
+.score{
+	float: right;
+	padding: 15px;
+	width: 194px;
+}
+.display{
+	float: left;
+	padding: 15px;
+	width: 194px;
+}
+.board{
+	float: left;
+	height: 380px;
+ 	margin-left: 194px;
+ 	margin-right: -574px;
+	width: 380px;
+}
+
+
+.place{
+	display: inline;
+	float: left;
+	height: 120px;
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 120px;
+}
+.place svg {
+  display: block;
+  height: 120px;
+  margin: auto;
+  width: 120px;
+}
+
+.display input{
+	border: 0;
+	height: 120px;
+	margin: 0;
+	padding: 0;
+	width: 120px;
+	
+}
+.display svg {
+	display: inline-block;
+	height: 120px;
+	margin: 0 0 0 -120px;
+	padding: 0;
+	width: 120px;
+}
+
+
+@media only screen and (max-width: 700px){
+	.tictactoe {
+		float: none;
+		margin: auto;
+		width: 100%;
+	}
+	.board,
+	.score,
+	.display {
+		float: none;
+		margin: auto;
+		width: 200px;
+	}
+	.board {
+		height: 200px;
+	}
+	.place{
+		height: 60px;
+		width: 60px;
+	}
+	.place svg{
+		height: 60px;
+		width: 60px;
+	}
+	.display input{
+		height: 60px;
+		width: 60px;
+	}
+	.display svg {
+		height: 60px;
+		margin: 0 0 0 -60px;
+		width: 60px;
+	}
+}
+
+
+/* colors */
+.tictactoe{
+	background: #fa5;
+}
+.board{
+	background: #ccc;
+}
+.score{
+	background: #aaf;
+}
+.display{
+	background: #aa5;
+}
+
+svg{
+	background: #000;
+	color: #fff;
+}
+
+circle {
+  stroke: red;
+  stroke-width: 6;
+}
+
+line {
+  stroke: red;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+
+
+h1 {
+	margin-left : 15px;
+}
+h6 {
+	margin-right : 15px;
+}
+body {
+	background: #efa;
+}
+
+.dimmed {
+	opacity : 0.5;
+}
+
+

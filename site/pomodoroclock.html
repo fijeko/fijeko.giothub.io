@@ -8,25 +8,26 @@
 	<link href="../css/pomodoroclock.css" rel="stylesheet"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no">
 
-	<title>POMODORO CLOCK</title>
+	<title>Pomodoro Clock</title>
 	<meta name="generator" content="Geany 1.24.1" />
 
 	<script src="../scripts/pomodoroclock.js"></script>
 </head>
 
-<body>
-	
-	<div class="usefull usefull-h clr-light-on-dark">
+<body class="clr-black-on-sky">
 		
-		<header class="header clr-light-on-dark">
-			<h1 class="clr-light">POMODORO CLOCK</h1>
-			<h6 class="clr-light">FreeCodeCamp Project</h6>
-		</header>
-		<nav class="nav clr-black-on-sky">
-			<div class="clr-light-on-dark"><a href="../index.html"><p>HOME</p></a></div>
-		</nav>
+	<header class="header usefull clr-light-on-dark">
+		<h1 class="clr-light">POMODORO CLOCK</h1>
+		<h6 class="clr-light">FreeCodeCamp Project</h6>
+	</header>
+
+	<nav class="nav usefull clr-black-on-sky">
+		<div class="clr-light-on-dark"><a href="../index.html"><p>HOME</p></a></div>
+	</nav>
 			
-		<main class="pomodoro">
+	<main class="main usefull clr-black-on-sky">
+
+		<div class="around pomodoro">
 
 			<div class="timer clr-black-on-sky full-width">
 					<p>
@@ -37,14 +38,14 @@
 						<span id="clock_mm">MM</span> : <span id="clock_ss">SS</span>
 					</p>
 			</div>
-
+	
 			<div class="timer-text clr-light-on-dark full-width">
 					<h5>timer:</h5>
 					<p>Pause (if you realy must), resume (as soon as possible) your working time
 					<br />
 					Feel free during break</p>
 			</div>
-
+	
 			<div class="timer-set clr-dark-on-light full-width">
 				<div class="bt-two">
 					<div id="clock_tgl">START</div><!-- 
@@ -53,12 +54,12 @@
 			</div>
 			
 	
-			<div class="timer-text clr-light half-width">
+			<div class="timer-text clr-light-on-dark half-width">
 					<h5>working session:</h5>
 					<p>Set minutes for your working session<br />
 						<span class="clr-warn"> This will reset timer!</span>
 					</p>
-			</div><div class="timer-text clr-light half-width">
+			</div><div class="timer-text clr-light-on-dark half-width">
 					<h5>break:</h5>
 					<p>Set minutes for your break<br />
 						<span class="clr-warn"> This will reset timer!</span>
@@ -97,11 +98,14 @@
 					</select>
 				</div>
 			</div>
+
+		</div>
 		
-		</main>
-	</div>
+	</main>
 
-
+		<footer class="footer clr-light-on-dark">
+			<p>Pomodoro Clock is Free Code Camp Project </p>
+		</footer>
 
 </body>
 
