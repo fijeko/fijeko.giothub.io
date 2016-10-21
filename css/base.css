@@ -8,10 +8,6 @@ body *{
 	-moz-box-sizing: border-box;
 }
 
-/*
- * width
- */
-
 header,
 nav,
 main,
@@ -44,10 +40,10 @@ footer, .footer {
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 320px) { .usefull { min-width : 320px; } }
-@media only screen and (min-width: 480px) { .usefull { min-width : 480px; } }
-@media only screen and (min-width: 768px) { .usefull { min-width : 768px; } }
-@media only screen and (min-width: 960px) { .usefull { min-width : 960px; } }
+@media only screen and (min-width:  320px) { .usefull { min-width : 320px; } }
+@media only screen and (min-width:  480px) { .usefull { min-width : 480px; } }
+@media only screen and (min-width:  768px) { .usefull { min-width : 768px; } }
+@media only screen and (min-width:  960px) { .usefull { min-width : 960px; } }
 @media only screen and (min-width: 1024px) { .usefull { min-width : 1024px; } }
 
 @media only screen and (min-width: 768px) {

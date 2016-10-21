@@ -1,152 +1,196 @@
-.footer p{
-	margin:auto;
-	max-width: 768px;
-}
-.usefull{
-	max-width: 768px;
-}
-.around {
-	margin:auto;
-	max-width: 768px;
-}
-
-
-.tictactoe {
-	float: left;
-	width: 768px;
-}
-
-.score{
-	float: right;
-	padding: 15px;
-	width: 194px;
-}
-.display{
-	float: left;
-	padding: 15px;
-	width: 194px;
-}
-.board{
-	float: left;
-	height: 380px;
- 	margin-left: 194px;
- 	margin-right: -574px;
-	width: 380px;
-}
-
-
-.place{
-	display: inline;
-	float: left;
-	height: 120px;
-	margin-left: 5px;
-	margin-top: 5px;
-	width: 120px;
-}
-.place svg {
-  display: block;
-  height: 120px;
-  margin: auto;
-  width: 120px;
-}
-
-.display input{
-	border: 0;
-	height: 120px;
+body{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	width: 120px;
-	
 }
-.display svg {
-	display: inline-block;
-	height: 120px;
-	margin: 0 0 0 -120px;
-	padding: 0;
-	width: 120px;
+header, .header {
+	display : block;
+	position : relative;
 }
-
-
-@media only screen and (max-width: 700px){
-	.tictactoe {
-		float: none;
-		margin: auto;
-		width: 100%;
-	}
-	.board,
-	.score,
-	.display {
-		float: none;
-		margin: auto;
-		width: 200px;
-	}
-	.board {
-		height: 200px;
-	}
-	.place{
-		height: 60px;
-		width: 60px;
-	}
-	.place svg{
-		height: 60px;
-		width: 60px;
-	}
-	.display input{
-		height: 60px;
-		width: 60px;
-	}
-	.display svg {
-		height: 60px;
-		margin: 0 0 0 -60px;
-		width: 60px;
-	}
+main, .main{
+	display: block;
+	padding: 15px 0 15px 0;
+	position: relative; 
+}
+footer, .footer {
+	display : block;
+	padding-bottom: 30px;
+}
+footer div, .footer div,
+header div, .header div{
+	margin: auto;
+	padding: 8px;
+	width: 360px;
 }
 
 
-/* colors */
-.tictactoe{
-	background: #fa5;
+.around{
+	height:360px;
+	margin: auto;
+	width: 360px;
 }
 .board{
-	background: #ccc;
+	display:inline;
+	float: left;
+	height: 300px;
+	margin: 60px 0 0 60px;
+	width: 300px; 
 }
-.score{
-	background: #aaf;
-}
-.display{
-	background: #aa5;
-}
-
-svg{
-	background: #000;
-	color: #fff;
-}
-
-circle {
-  stroke: red;
-  stroke-width: 6;
+.place{
+	display:inline;
+	float:left;	
+	height: 75px;
+	margin: 5px 0 0 5px;
+	width: 75px;
 }
 
-line {
-  stroke: red;
-  stroke-width: 6;
-  stroke-linecap: round;
+@media (min-width: 1080px){
+	.around{
+		margin-left: 300px;
+		width: 360px;
+	}
+	main, .main{
+		padding-top: 30px;
+	}
+	footer div, .footer div,
+	header div, .header div{
+		margin-left: 300px;
+	}
+}
+
+@media (max-width: 359px){
+	.around { 
+		height: 240px; width: 240px;
+		margin: auto;
+	}
+	.board { 
+		height: 240px; width: 240px;
+		margin: auto;
+		padding: 0;
+	}
+	footer div, .footer div,
+	header div, .header div{
+		width: 240px;
+	}
+}
+@media (max-height: 500px) and (min-width: 500px){
+	header, .header{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	footer, .footer{
+/* 		clear: right;
+		float: right; */
+		position: absolute;
+		right:0;
+		bottom:0;
+	}
+	header div, .header div, footer div, .footer div{
+		width: 220px;
+		padding: 8px 0 0 0;
+	}
+	main, .main{
+/* 		margin-right: 225px; */
+		position: absolute;
+		left:0;
+		top:0;
+		right:225px;
+	}
+	.around{
+		margin: auto;
+		height: 243px; width: 243px;
+	}
+	.board  {
+		height: 243px; width: 243px;
+		margin: 0;
+		padding: 0;
+	}
+}
+@media (max-height: 499px) and (max-width: 499px){
+	.hid{
+		display: none;
+	}
+	main, .main{ padding:0; }
+	header div, .header div, footer div, .footer div{
+		width: 220px;
+		padding: 0;
+	}
+	h1 { margin: 0; }
+	.around{
+		margin: auto;
+		padding: 0;
+		height: 243px; width: 243px;
+	}
+	.board  {
+		height: 243px; width: 243px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+.clrb-light{
+	background: #dc9;
+}
+.clrb-dark{
+	background: #220202;
+}
+.clrb-semi{
+	background: #876;
+}
+.clr-light{
+	color: #dca;
+}
+
+
+.clr-normal{
+	background: #dc9;
+	color: #992222;
+}
+.clr-win{
+	background: #994444;
+	color: #edc;
+}
+.clr-draw{
+	background: #642;
+	color: #a98765;
 }
 
 
 
-h1 {
-	margin-left : 15px;
+html {
+  font-size:14.1732pt;                         /* = 5mm */
+  line-height:21.26pt;
 }
-h6 {
-	margin-right : 15px;
-}
+
 body {
-	background: #efa;
+	font-size : 65.2%;                           /* 5 * 0.60 = 3mm */                   
 }
 
-.dimmed {
-	opacity : 0.5;
+.fnt-para{
+	font-family: 'Assistant', sans-serif;
+}
+h1{ font-size: 2em; }
+p{ font-size:1.2em; }
+strong{ font-size:130%;}
+
+header div, .header div{
+	text-align: center;
+}
+footer div, .footer div{
+	text-align: right;
+}
+footer div *, .footer div * {
+	margin-right: 15px;
 }
 
 
+.fnt-place {	
+	font-family: 'Baloo Da', cursive; 
+	font-size: 60px;
+	line-height: 75px;
+	text-align:center;
+}
