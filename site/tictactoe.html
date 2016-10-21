@@ -2,72 +2,55 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet"> 
-	<link href="../css/base.css" rel="stylesheet"> 
-	<link href="../css/buttons.css" rel="stylesheet"> 
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no" />
+	<link href="https://fonts.googleapis.com/css?family=Assistant|Baloo+Da"
+			rel="stylesheet">
 	<link href="../css/tictactoe.css" rel="stylesheet">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>TicTacToe</title>
+	<title>TicTacToe Logic</title>
 	<meta name="generator" content="Geany 1.24.1" />
 	<script src="../scripts/tictactoe.js"></script>
 </head>
-<body>
-	
-	<header class="header usefull clr-white-on-black">
-		<h1>TIC TAC TOE</h1>
-		<h6>Free Code Camp Project</h6>
+<body class="clrb-dark">
+	<header class="header clr-light fnt-para">
+		<div>
+			<h1 class="center">TIC-TAC-TOE</h1>
+			<p class="center"> <strong>click and play</strong> </p>
+		</div>
 	</header>
-	
-	<nav class="nav usefull clr-white-on-black">
-		<div class="clr-white-on-black"><a href="../index.html"><p>HOME</p></a></div>
+	<nav class="nav clrb-dark fnt-para ty-right">
+		<div><a class="clr-light"href="../index.html"><span>HOME</span></a></div>
 	</nav>
-	
-	<main class="main usefull">
-
-		<div class="around"><div class="tictactoe">
-			<div id="board" class="board">
-				      <div class="place clr-white-on-black" id="place0">
-				</div><div class="place clr-white-on-black" id="place1">
-				</div><div class="place clr-white-on-black" id="place2">
-				</div><div class="place clr-white-on-black" id="place3">
-				</div><div class="place clr-white-on-black" id="place4">
-				</div><div class="place clr-white-on-black" id="place5">
-				</div><div class="place clr-white-on-black" id="place6">
-				</div><div class="place clr-white-on-black" id="place7">
-				</div><div class="place clr-white-on-black" id="place8">
-			</div></div>
-			
-			<div class="display">
+	<main class="main clrb-semi">
+		<div class="around clrb-light">
+			<div id="board" class="board clrb-dark">
+					<div id="place1" class="place clr-normal fnt-place">
+					</div><div id="place2" class="place clr-normal fnt-place">
+					</div><div id="place3" class="place clr-normal fnt-place">
+					</div><div id="place4" class="place clr-normal fnt-place">
+					</div><div id="place5" class="place clr-normal fnt-place">
+					</div><div id="place6" class="place clr-normal fnt-place">
+					</div><div id="place7" class="place clr-normal fnt-place">
+					</div><div id="place8" class="place clr-normal fnt-place">
+					</div><div id="place9" class="place clr-normal fnt-place">
 				
-				<div id="display" class="display-choose dimmed">
-					<p>CHOOSE TO START: </p>
-					<input type="radio" name="sign" id="radio-x">
-					<label for="radio-x">
-						<svg>
-							<line x1=5 y1=5 x2=55 y2=55 />
-							<line x1=5 y1=55 x2=55 y2=5 />
-						</svg>
-					</label>
-					<input type="radio" name="sign" id="radio-o">
-					<label for="radio-o">
-						<svg><circle cx="30" cy="30" r="25" /></svg>
-					</label>
-				</div>
-			</div>
-
-			<div class="score">
-				<div>
-					<p>SCORE</p>
-				</div>
-			</div>
-			
+			</div></div>
+		</div>
 	</main>
-	
-	<footer class="footer clr-white-on-black">
-		<p>abc</p>
+	<footer class="footer clr-light fnt-para hid">
+		<div>
+			<span>Free Code Camp chalenge coded by</span>
+			<address class="address"> @fijeko </address>
+		</div>
 	</footer>
+
+<div hidden> 
+	<button style= "height:100px;width:100px;padding:10px" id="bug">Bug</button>
+	<p id="ups"></p>
+</div>
+		
+
+
 
 </body>
 </html>

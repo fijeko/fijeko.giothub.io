@@ -5,6 +5,10 @@ body{
 	margin: 0;
 	padding: 0;
 }
+p{
+	margin: 0;
+}
+
 header, .header {
 	display : block;
 	position : relative;
@@ -19,7 +23,8 @@ footer, .footer {
 	padding-bottom: 30px;
 }
 footer div, .footer div,
-header div, .header div{
+header div, .header div,
+nav div, .nav div{
 	margin: auto;
 	padding: 8px;
 	width: 360px;
@@ -186,7 +191,15 @@ footer div, .footer div{
 footer div *, .footer div * {
 	margin-right: 15px;
 }
-
+a{
+	display:block;
+	font-size: 1.5em;
+	text-align: right;
+	text-decoration: none;
+}
+a:hover>*{
+	border: 1px solid #dca;
+}
 
 .fnt-place {	
 	font-family: 'Baloo Da', cursive; 
