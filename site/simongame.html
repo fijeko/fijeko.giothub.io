@@ -1,75 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-	<link href="../css/base.css" rel="stylesheet"> 
-	<link href="../css/buttons.css" rel="stylesheet"> 
-	<link href="../css/simongame.css" rel="stylesheet"> 
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no" />
-	<title>SIMON GAME</title>
-	<meta name="generator" content="Geany 1.24.1" />
-	<script src="../scripts/simongame.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Assistant" >
+    <link href="../css/simongame.css" rel="stylesheet"> 
+    <title>SIMON GAME</title>
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
-
 <body>
-		<header class="header usefull clr-light-on-dark">
-			<h1 class="clr-light">SIMON GAME</h1>
-			<h6 class="clr-light">FreeCodeCamp Project</h6>
-		</header>
 
-		<nav class="nav clr-black-on-sky">
-			<div class="clr-light-on-dark"><a href="../index.html"><p>HOME</p></a></div>
-		</nav>
-		
-		<main class="usefull usefull-h clr-black-on-sky">
+<header><h1>SIMON GAME</h1></header> 
 
-			<div class="d_display clr-display">
-				
-				<div id="d_step">
-					<p id="p_step"> 0 </p>
-				</div>
+<section>
+<div class="simon">
 
-				<div>
-				<div class="bt-on_of" >
-					<div>O</div><!--
-					--><div id="b_stop" class="clr-bt-on"></div><!--
-					--><div id="b_start"></div><!--
-					--><div>I</div>
-				</div>
-				</div>
-			
-			</div>
+    <div>
+        <div id="d_step">
+            <p id="p_step"> 0 </p>
+        </div>
+        <div class="on-off"><div>
+            <div id="b_stop">off</div>
+            <div id="b_start">on</div>
+        </div></div>
+    </div>
+    
+    <div class="d-funny">
+        <div id="b_snd1" class="b-funny clr-f1"></div>
+        <div id="b_snd2" class="b-funny clr-f2"></div>
+        <div id="b_snd3" class="b-funny clr-f3"></div>
+        <div id="b_snd4" class="b-funny clr-f4"></div>
+    </div>
+            
+</div>
+</section>
 
-			<div>
-				<audio id="snd_1" type="audio/mpeg"
-					src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
-				<audio id="snd_2" type="audio/mpeg"
-					src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
-				<audio id="snd_3" type="audio/mpeg"
-					src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
-				<audio id="snd_4" type="audio/mpeg"
-					src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3">adio</audio>
-			</div>
 
-			
-			
-			<div class="d_funny">
-				<div id="b_snd1" class="b_funny clr-f1"></div><!-- 
-				--><div id="b_snd2" class="b_funny clr-f2"></div><!-- 
-				--><div id="b_snd3" class="b_funny clr-f3"></div><!-- 
-				--><div id="b_snd4" class="b_funny clr-f4"></div>
-			</div>
+<div class="audio">
+    <audio id="snd_1" type="audio/mpeg"
+        src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+    <audio id="snd_2" type="audio/mpeg"
+        src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+    <audio id="snd_3" type="audio/mpeg"
+        src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+    <audio id="snd_4" type="audio/mpeg"
+        src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3">adio</audio>
+</div>
 
-			
-			
-		</main>
+<footer>
+    <a href="https://www.freecodecamp.com/challenges/learn-what-to-do-if-you-get-stuck">
+        <p>FreeCodeCamp Project</p></a>
+    <a href="https://github.com/fijeko/fijeko.github.io"><p>@fijeko</p></a>
+</footer>
 
-		<footer class="footer clr-white-on-black">
-			<p>abc</p>
-		</footer>
-
+<div><script src="../scripts/simongame.js"></script></div>
 </body>
 
 </html>

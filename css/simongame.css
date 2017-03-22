@@ -1,80 +1,137 @@
-/* position */
 
-.d_display{
-	left : 15%;
-	height: 15%;
-	position : absolute;
-	right : 15%;
-	top: 0;
+html {
+    font-size: 12pt;
+    margin:0; padding:0;
 }
-.d_display > div {
-	height: 50%;
-	padding: 0 16px;
-	position : relative;
-	width : 100%;
+body {
+    background-color: #468;
+    font-family: 'Assistant', sans-serif;
+    font-size : 100%;             
+    font-weight: 300;
+    line-height: 1.25;
+    margin:0; padding:0;
 }
-.d_display > div > * {
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	-ms-transform: translate( -50%, -50%); /* IE 9 */
-  -webkit-transform: translate( -50%, -50%); /* Safari */
-  transform: translate( -50%, -50%);
-}
+a:visited { color: inherit; }
+a:hover { font-weight: 700; }
 
-
-.d_funny {
-	left : 15%;
-	position : absolute;
-	right : 15%;
-	top: 25%;
+header {
+    color: #eee;
+    display: block;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    width: 320px;
 }
-.b_funny {
-	display : inline-block;
-	margin:1%;
-	padding: 24%;
-	vertical-align : top;
-	width: 24%;
+section {
+    display: block;
+    background-color: #e8f8e8;
+    margin: 10px 0;
+}
+footer {
+    color: #ddd;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 320px;
 }
 
-	
-/* nice */
-/* display */
-
-#p_step{
-	font-size: 2em;
-	line-height: 1em;
-	text-align: center;
-	position: relative;
+.simon {
+    border: 1px solid black;
+    color: #333;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 300px;
 }
-.clr-display {
-	background: #333;
-	color: #fff;
+@media (min-width: 640px) {
+    .simon {
+        margin-left: 120px;
+    }
+    header, footer {
+        margin-left: 120px;
+    }
 }
 
-/* funny */
-.d_funny {
-	background : #333;
-	border-radius: 20%;
-}
-.b_funny {
-	border-radius: 40%;
-}
-.clr-f1 { background-color: #faa; }
-.clr-f2 { background-color: #bfb; }
-.clr-f3 { background-color: #ffa; }
-.clr-f4 { background-color: #89f; }
 
-.clr-active-f1 { background-image: radial-gradient( #fee 0%, #fff 8%, #fff 16%, #fbb 85% ); }
-.clr-active-f2 { background-image: radial-gradient( #dfd 0%, #fff 8%, #fff 16%, #afa 85% ); }
-.clr-active-f3 { background-image: radial-gradient( #ff8 0%, #fff 8%, #fff 16%, #ffb 85% ); }
-.clr-active-f4 { background-image: radial-gradient( #eef 0%, #fff 8%, #fff 16%, #78f 85% ); }
+h1 {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin: 0;
+}
 
-.stop_g { background-color : #555; color : $fff; }
+p#p_step {
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: 1rem  2rem;
+    text-align: center;
+}
+.on-off {
+    font-size: 1.5rem;
+    margin: 1rem  2rem;
+    text-align: center;
+}
+.on-off > div {
+    border-radius: 5px;
+    background-color: #555;
+}
+.on-off > * > div {
+    display: inline-block;
+    width: 48%;
+}
+
+.d-funny {
+    background-color: #777;
+    border-radius: 160px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+.b-funny {
+    height: 146px;
+    width: 146px;
+    position: absolute;
+}
+.b-funny.clr-f1 {
+    background-color: #faa;
+    left: 0;
+    top: 0;
+}
+.b-funny.clr-f2 {
+    background-color: #bfb;
+    right: 0;
+    top: 0;
+}
+.b-funny.clr-f3 {
+    background-color: #ffa;
+    bottom: 0;
+    left: 0;
+}
+.b-funny.clr-f4 {
+    background-color: #89f;
+    bottom: 0;
+    right: 0;
+}
+
+.clr-active-f1 {
+    background: radial-gradient( #fee 0%, #fff 8%, #fff 16%, #fbb 85% );
+}
+.clr-active-f2 {
+    background: radial-gradient( #dfd 0%, #fff 8%, #fff 16%, #afa 85% );
+}
+.clr-active-f3 {
+    background: radial-gradient( #ff8 0%, #fff 8%, #fff 16%, #ffb 85% );
+}
+.clr-active-f4 {
+    background: radial-gradient( #eef 0%, #fff 8%, #fff 16%, #78f 85% );
+}
+
+.stop_g { background-color : #555; color : #fff; }
 .play_g { background-color : #89f; color : #def; }
-.repr_g { background-color : #bfb; color : #def; }
+.repr_g { background-color : #bfb; color : #444; }
 .winn_g { background-color : #ffa; color : #def; }
 .fail_g { background-color : #faa; color : #def; }
 .def_g { background-color : 000; color : #aa0 }
-
-
+.clr-bt-on { background: #ace; color: #555; }
+.clr-bt-of { background: #555; color: #ddd; }

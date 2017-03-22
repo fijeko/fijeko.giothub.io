@@ -1,0 +1,266 @@
+/* overall resp fonts */
+html {
+    font-size: 12pt;
+}
+body {
+    font-size : 100%;             
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+
+/* font text typo */
+h1,h2,h3,h4,h5,h6,p {
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+code,
+kbd,
+samp,
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+dfn {
+    font-style: oblique;
+}
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+small {
+    font-size: 85%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+abbr[title]:hover {
+    cursor: help;
+}
+
+
+
+/* blocks */
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main,
+details,
+menu {
+    display: block;
+    }
+summary {
+    display: list-item;
+}
+template {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+
+
+figure {
+    margin: 1em 40px;
+}
+img {
+    max-width: 100%;
+    border-style: none;
+    font-style: italic;
+    font-size: 80%;
+    height: auto;
+}
+audio,
+video {
+    display: inline-block;
+    max-width: 100%;
+    font-style: italic;
+    font-size: 80%;
+    height: auto;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+canvas {
+    display: inline-block;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+
+hr {
+    border-width: 1px solid transparent;
+    border-top-color: inherit;  
+    box-sizing: content-box;
+    height: 0;
+    margin: 8px 0;
+    overflow: visible;
+}
+
+
+
+/* table */
+table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td {
+    padding: 6px 12px;
+    border-top-color: inherit;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+th {
+    padding: 6px 12px;
+}
+th:first-child,
+td:first-child {
+    padding-left: 24px;
+    border-left: transparent;
+    }
+    
+th:last-child,
+td:last-child {
+    padding-right: 24px;
+    border-right: transparent;
+    }
+
+
+
+/* list */
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 1em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin-top: 1em;
+}
+li {
+    margin-bottom: 1rem;
+}
+ol.inline,
+ul.inline {
+    list-style: none;
+    letter-spacing: -1em;
+    padding: 0;
+}
+ol.inline li,
+ul.inline li {
+    display: inline;
+    letter-spacing: normal;
+}
+
+
+/* button */
+ 
+.button {
+    border-width: 2px;
+    border-style: solid;
+    border-color: inherit;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin: 0;
+    opacity: 0.5;
+    padding: 0 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    
+    /* IE Edge */
+    overflow: visible;
+
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+    }
+
+.button:link,
+.button:visited {
+    color: inherit;
+    background-color: inherit;
+    
+    }
+.button:hover,
+.button:active,
+.button:focus {
+    color: inherit;
+    background-color: inherit;
+    opacity: 0.9;
+    outline: 0;
+    }
+
+/* inner border and padding in Firefox */
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+    }
+/* restore the focus styles unset by the previous rule */
+button:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+
+
+/* links */
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline-width: 0;
+}
+
+
+/* noselect */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

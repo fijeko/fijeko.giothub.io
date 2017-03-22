@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Ramaraja">
+    <link href="../css/base/init.css" rel="stylesheet">
+    <link href="../css/wviewer.css" rel="stylesheet">
+    <script src="../scripts/vendor/jquery.js"></script>
+    <title>Wikipedia Viewer</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1 class="wiki">Wikipedia Viewer</h1>
+    </header>
+
+    <main>
+    <section>
+        <div class="row">
+          <a href="https://en.wikipedia.org/wiki/Special:Random" 
+             class="button"
+             target="_blank">
+            Click here for a random article</a>
+        </div>
+        <div class="row">
+            <input id="srci" type="search"  
+               placeholder="Enter search string ..."
+               autocomplete="yes"
+               class="button" />
+            <button id="ask" class="button">-&gt;</button>
+        </div>
+    </section>
+    
+    <section> <div id="wiki"></div> </section>
+    </main>
+
+</div> 
+<div><script src="../scripts/wviewer.js"></script></div>
+</body>
+</html>
+
+
+
+
+
+
+

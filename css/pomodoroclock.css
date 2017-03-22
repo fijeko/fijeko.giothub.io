@@ -1,82 +1,119 @@
-.pomodoro{
-	border : 1px solid #def;
-	border-radius:  4px;
-	bottom : 0;
-	height: 320px;
-	max-width: 560px;
-	position: relative;
-}
-.timer {
-	height:50%;
-}
 
-.timer-text{
-	display : none;
+html {
+    font-size: 12pt;
+    margin:0; padding:0;
 }
-
-.timer-set{
-	border : 1px solid #333;
-	border-radius:  6% / 50%;
-	height:12.5%;
+body {
+    background-color: #123;
+    font-family: 'Assistant', sans-serif;
+    font-size : 100%;             
+    font-weight: 300;
+    line-height: 1.25;
+    margin:0; padding:0;
 }
+a:visited { color: inherit; }
+a:hover { font-weight: 700; }
 
-@media only screen and (min-width: 768px) {
-	.pomodoro {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display : flex;
-		-webkit-box-flow: wrap;
-		-webkit-flex-flow: wrap;
-		-ms-flex-flow: wrap;
-		flex-flow : wrap;
-		max-width: 480px;
-		min-height: 480px;
-	}
-	.half-width {
-		width:50%;
-	}
-	.full-width {
-		width: 100%;
-	}
-	.timer-text {
-		display : inline-block;
-	}
-	.timer {
-		height: 30%;
-	}
-	.timer-set {
-		height:8%;
-	}
-	.timer-text {
-		height: 23%;
-	}
-	
+header {
+    color: #def;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 320px;
+    height: 70px;
+}
+section {
+    display: block;
+    background-color: #def;
+}
+footer {
+    color: #def;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 320px;
 }
 
 
 
-.timer{
-	text-align:center;
+.clock {
+    border: 3px solid #123;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    width: 320px;
 }
-.timer p:first-child{
-	font-size : 1.5em;
+@media (min-width: 640px) {
+    .clock {
+        border-width: 15px;
+        border-radius: 50%;
+        height: 400px;
+        padding-top: 60px;
+        width: 600px;
+    }
+    header, footer {
+        width: 600px;
+    }
 }
-.timer-time{
-	color: #ff4466;
-	font-size: 6em;
-	margin: 5px;
-	line-height: 1.5em;
-	text-align: center;
-}
-.timer-set{
-	font-size : 2em;
+@media (min-width: 1280px) {
+    .clock {
+        margin-left: 120px;
+    }
+    header, footer {
+        margin-left: 120px;
+    }
 }
 
-.timer-text{
-	border : 0.5px solid #eee;
-	border-radius: 4px;
-	padding: 5px;
-	text-align: justify;
+
+h1 {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin: 0;
 }
+
+p {
+    font-size: 1rem;
+    line-height: 20px;
+    height: 20px;
+    text-align: center; 
+}
+p#clock_mode_y {
+    color: #f22;
+}
+p.timer {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+p#clock_tgl,
+p#clock_rst {
+    border: 1px solid #123;
+    margin: 0 auto;
+    width: 90%;
+}
+
+    
+p.note {
+    color: #f22;
+    font-size: 0.85rem;
+}
+p.setting-title span {
+    display: inline-block;
+    width: 45%;
+}
+p.setting span {
+    border: 1px solid #123;
+    display: inline-block;
+    width: 14%;
+}
+
+p#clock_tgl:hover,
+p#clock_rst:hover,
+p.setting span:nth-child(1):hover,
+p.setting span:nth-child(3):hover,
+p.setting span:nth-child(4):hover,
+p.setting span:nth-child(6):hover {
+    background-color: #922;
+    color: #def;
+}
+
 

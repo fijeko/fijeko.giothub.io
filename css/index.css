@@ -1,0 +1,81 @@
+/* global for page */
+body {
+    font-family: 'Lora', serif;
+}
+
+li > a, 
+li > a:visited {
+    color: #def;
+}
+a.button.nolink:hover {
+    opacity: 0.5;
+} 
+
+
+/* header */
+h1 {
+    line-height: 3em;
+}
+.row.header {
+    background-color: #333;
+    color: #def;
+}
+
+ul.menu {
+    list-style: none;
+}
+ul.menu li {
+    display: inline-block;
+}
+
+/* main */
+
+
+ul.files, ul.files ul {
+    color: #39659e;
+    padding-left: 3em;
+}
+ul.files {
+    font-size: 1em;
+    list-style-type: '\1F427\a0\a0';
+    list-style-position: outside;
+}
+ul.files ul {
+    font-size: 0.85em;
+    line-height: 1;
+    list-style-type: '-\a0\a0';
+    list-style-position: outside;
+    margin-left: 3em;
+}
+li.done:before {
+    content: '\a0\a0\2713\a0\a0';
+    font-size: 1.5em;
+    line-height: 0;
+}
+li.todo:before {
+    content: '\a0\a0\270F\a0\a0';
+    font-size: 1.5em;
+    line-height: 0;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    box-shadow: 0 500px 0 500px #333;
+    color: #def;
+}
+.author {
+    padding-right: 1.5em;
+    text-align: right;
+    text-decoration: underline;
+}
+.author a:visited {
+    color: #def;
+    font-weight: 500;
+}
+.author a:hover {
+    color: #fff;
+    font-weight: 700;
+}
+
+

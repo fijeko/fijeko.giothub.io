@@ -1,108 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"
-				content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no">
-	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-	<link href="../css/base.css" rel="stylesheet"> 
-	<link href="../css/buttons.css" rel="stylesheet"> 
-	<link href="../css/pomodoroclock.css" rel="stylesheet"> 
-	<title>Pomodoro Clock</title>
-	<meta name="generator" content="Geany 1.24.1" />
-	<script src="../scripts/pomodoroclock.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scable=no">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Assistant" > 
+    <link rel="stylesheet" href="../css/pomodoroclock.css"> 
+    <title>Pomodoro Clock</title>
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
-<body class="clrb-dark">
-		
-	
-	<div class="usefull usefull-h clr-light-on-dark">
-		
-		<header class="header clr-light-on-dark">
-			<h1 class="clr-light">POMODORO CLOCK</h1>
-			<h6 class="clr-light">FreeCodeCamp Project</h6>
-		</header>
-		<nav class="nav clr-black-on-sky">
-			<div class="clr-light-on-dark"><a href="../index.html"><p>HOME</p></a></div>
-		</nav>
-			
-		<main class="pomodoro">
+<body>
 
-			<div class="timer clr-black-on-sky full-width">
-					<p>
-						Your <strong><span id="clock_mode_y">M</span></strong> time
-						is <strong><span id="clock_mode_n">M</span></strong> ticking
-					</p>
-					<p class="timer-time">
-						<span id="clock_mm">MM</span> : <span id="clock_ss">SS</span>
-					</p>
-			</div>
+    <header><h1>POMODORO CLOCK</h1></header>
+    
+    <section>
+    <div class="clock">
+        
+        <p class="timer">
+            <span id="clock_mm"></span> : <span id="clock_ss"></span>
+        </p>
 
-			<div class="timer-text clr-light-on-dark full-width">
-					<h5>timer:</h5>
-					<p>Pause (if you realy must), resume (as soon as possible) your working time
-					<br />
-					Feel free during break</p>
-			</div>
+        <p id="clock_mode_y"> </p>
 
-			<div class="timer-set clr-dark-on-light full-width">
-				<div class="bt-two">
-					<div id="clock_tgl">START</div><!-- 
-					--><div id="clock_rst">RESET</div>
-				</div>
-			</div>
-			
-	
-			<div class="timer-text clr-light half-width">
-					<h5>working session:</h5>
-					<p>Set minutes for your working session<br />
-						<span class="clr-warn"> This will reset timer!</span>
-					</p>
-			</div><div class="timer-text clr-light half-width">
-					<h5>break:</h5>
-					<p>Set minutes for your break<br />
-						<span class="clr-warn"> This will reset timer!</span>
-					</p>
-			</div>
+        <p id="clock_tgl">START</p>
+        <p id="clock_rst">RESET</p>
+        
 
-			<div class="timer-set clr-dark-on-light half-width">
-				<div class="bt-num-range">
-					<div id="session_up">+</div><!-- 
-					--><div id="session" value="MM"></div><!-- 
-					--><div id="session_dn">-</div>
-				</div>
-			</div>
-			<div class="timer-set clr-dark-on-light half-width">
-				<div class="bt-num-range">
-					<div id="break_up">+</div><!-- 
-					--><div id="break" value="MM"></div><!-- 
-					--><div id="break_dn">-</div>
-				</div>
-			</div>
+        <p class="setting-title">
+            <span>work session</span>|<span>break session</span></p>
 
-			<div class="timer-set clr-dark-on-light full-width">
-				<div class="sel-select">
-					<select id="t_speed" class="nobutton">
-						<option selected="selected" label="normal speed" value="1">normal speed</option>
-						<optgroup label="faster">
-							<option label="2x faster" value="0.5">2x faster</option>
-							<option label="4x faster" value="0.25">4x faster</option>
-							<option label="8x faster" value="0.125">8x faster</option>
-						</optgroup>
-						<optgroup label="slower">
-							<option label="2x slower" value="2">2x slower</option>
-							<option label="4x slower" value="4">4x slower</option>
-							<option label="8x slower" value="8">8x slower</option>
-						</optgroup>
-					</select>
-				</div>
-			</div>
-		
-		</main>
-	</div>
+        <p class="setting">
+            <span id="session_up">+</span>
+            <span id="session" value="MM"></span>
+            <span id="session_dn">-</span>
+            |
+            <span id="break_up">+</span>
+            <span id="break" value="MM"></span>
+            <span id="break_dn">-</span>
+        </p>
+        <p class="note">Setting sessions will reset timer!</p>
+    </div>    
+    </section>
+
+<footer>
+    <a href="https://www.freecodecamp.com/challenges/learn-what-to-do-if-you-get-stuck">
+        <p>FreeCodeCamp Project</p></a>
+    <a href="https://github.com/fijeko/fijeko.github.io"><p>@fijeko</p></a>
+</footer>
 
 
-
+<div><script src="../scripts/pomodoroclock.js"></script></div>
 </body>
-
 </html>
