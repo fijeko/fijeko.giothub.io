@@ -12,8 +12,8 @@ html, body {
     width: 320px;
 }
 .row {
-     margin-bottom: 32px;
-     position: relative;
+    margin-bottom: 32px;
+    position: relative;
 }
 /* block floats and  top margins of next element  */
 .row:after,
@@ -62,15 +62,16 @@ html, body {
 
 /* columns */
 .column {
-    width: 100%;
+    display: inline-block;
     float: left;
+    width: 100%;
 }
 
 
 
 @media (min-width: 600px) {
     .one-fourth      { width: 22.0% }
-    .one-third       { width: 30.6666666667%; }
+    .one-third       { width: 32.6666666667%; }
     .two-thirds      { width: 65.3333333333%; }
     .one-half        { width: 48%; }
 

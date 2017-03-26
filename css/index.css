@@ -78,4 +78,7 @@ footer {
     font-weight: 700;
 }
 
-
+.second-col {
+    border-left: 1px solid #ddd;
+    margin-left: 2%;
+}

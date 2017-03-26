@@ -1,6 +1,2 @@
 
-Some FreeCodeCamp chalenges and projects.
-
-- Pomodoro clock
-- Simon Game
-
+[Free Code Camp](https://www.freecodecamp.com) Front End Projects.
