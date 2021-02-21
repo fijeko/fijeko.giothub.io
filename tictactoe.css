@@ -1,0 +1,201 @@
+body{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+
+header, .header {
+    display : block;
+    position : relative;
+}
+main, .main{
+    display: block;
+    padding: 15px 0 15px 0;
+    position: relative; 
+}
+footer, .footer {
+    display : block;
+    padding-bottom: 30px;
+}
+footer div, .footer div,
+header div, .header div,
+nav div, .nav div{
+    margin: auto;
+    padding: 8px;
+    width: 360px;
+}
+
+
+.around{
+    height:360px;
+    margin: auto;
+    width: 360px;
+}
+.board{
+    display:inline;
+    float: left;
+    height: 300px;
+    margin: 60px 0 0 60px;
+    width: 300px; 
+}
+.place{
+    display:inline;
+    float:left;	
+    height: 75px;
+    margin: 5px 0 0 5px;
+    width: 75px;
+}
+
+@media (min-width: 1080px){
+    .around{
+        margin-left: 300px;
+        width: 360px;
+    }
+    main, .main{
+        padding-top: 30px;
+    }
+    footer div, .footer div,
+    header div, .header div{
+        margin-left: 300px;
+    }
+}
+
+@media (max-width: 359px){
+    .around { 
+        height: 240px; width: 240px;
+        margin: auto;
+    }
+    .board { 
+        height: 240px; width: 240px;
+        margin: auto;
+        padding: 0;
+    }
+    footer div, .footer div,
+    header div, .header div{
+        width: 240px;
+    }
+}
+@media (max-height: 500px) and (min-width: 500px){
+    header, .header{
+        position:absolute;
+        top:0;
+        right:0;
+    }
+    footer, .footer{
+    /* 		clear: right;
+        float: right; */
+        position: absolute;
+        right:0;
+        bottom:0;
+    }
+    header div, .header div, footer div, .footer div{
+        width: 220px;
+        padding: 8px 0 0 0;
+    }
+    main, .main{
+        position: absolute;
+        left:0;
+        top:0;
+        right:225px;
+    }
+    .around{
+        margin: auto;
+        height: 243px; width: 243px;
+    }
+    .board  {
+        height: 243px; width: 243px;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-height: 499px) and (max-width: 499px){
+    .hid{
+        display: none;
+    }
+    main, .main{ padding:0; }
+    header div, .header div, footer div, .footer div{
+        width: 220px;
+        padding: 0;
+    }
+    h1 { margin: 0; }
+    .around{
+        margin: auto;
+        padding: 0;
+        height: 243px; width: 243px;
+    }
+    .board  {
+        height: 243px; width: 243px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+.clrb-light { background: #dc9; }
+.clrb-dark  { background: #220202; }
+.clrb-semi  { background: #876; }
+.clr-light  { color: #dca; }
+
+.clr-normal{
+    background: #dc9;
+    color: #992222;
+}
+.clr-win{
+    background: #994444;
+    color: #edc;
+}
+.clr-draw{
+    background: #642;
+    color: #a98765;
+}
+
+
+
+html {
+  font-size:14.1732pt; /* = 5mm */
+  line-height:21.26pt;
+}
+
+body {
+    font-size : 65.2%; /* 5 * 0.60 = 3mm */                   
+}
+
+.fnt-para{
+    font-family: 'Assistant', sans-serif;
+}
+h1{ font-size: 2em; }
+p{ font-size:1.2em; }
+strong{ font-size:130%;}
+
+header div, .header div{
+    text-align: center;
+}
+footer div, .footer div{
+    text-align: right;
+}
+footer div *, .footer div * {
+    margin-right: 15px;
+}
+a{
+    font-size: 1.7em;
+    text-align: right;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:hover>*{
+    border: 1px solid #dca;
+}
+
+.fnt-place {	
+    font-family: 'Baloo Da', cursive; 
+    font-size: 60px;
+    line-height: 75px;
+    text-align:center;
+}
